@@ -27,3 +27,14 @@ function operate(num1, num2, operator) {
     if (operator == '*') return multiply(num1, num2);
     if (operator == '/') return divide(num1, num2);
 }
+
+
+const display = document.querySelector('#display');
+const digitButton = document.querySelectorAll('.digit');
+const digitButtons = Array.from(document.querySelectorAll('.digit'));
+
+digitButtons.forEach(digitButton => {
+    digitButton.addEventListener('click', function() {
+        display.textContent = digitButton.textContent;
+    });
+});
