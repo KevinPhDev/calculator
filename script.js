@@ -32,9 +32,25 @@ function operate(num1, num2, operator) {
 const display = document.querySelector('#display');
 const digitButton = document.querySelectorAll('.digit');
 const digitButtons = Array.from(document.querySelectorAll('.digit'));
+const operatorButton = document.querySelectorAll('.operator');
+const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 
-digitButtons.forEach(digitButton => {
-    digitButton.addEventListener('click', function() {
-        display.textContent = digitButton.textContent;
+function pressNumber() {
+    digitButtons.forEach(digitButton => {
+        digitButton.addEventListener('click', function() {
+            display.textContent = digitButton.textContent;
+            return digitButton.textContent;
+        });
     });
-});
+}
+
+function pressOperator() {
+    operatorButtons.forEach(operatorButton => {
+        operatorButton.addEventListener('click', function() {
+            return operatorButton.textContent;
+        });
+    });
+}
+
+pressNumber();
+pressOperator();
