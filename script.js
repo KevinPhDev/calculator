@@ -38,8 +38,8 @@ const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 function pressNumber() {
     digitButtons.forEach(digitButton => {
         digitButton.addEventListener('click', function() {
-            display.textContent = digitButton.textContent;
-            return digitButton.textContent;
+            display.textContent += digitButton.textContent;
+            return display.textContent;
         });
     });
 }
@@ -51,6 +51,8 @@ function pressOperator() {
         });
     });
 }
+
+
 
 pressNumber();
 pressOperator();
