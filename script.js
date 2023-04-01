@@ -2,6 +2,11 @@ let num1;
 let num2;
 let operator;
 
+const display = document.querySelector('#display');
+const digitButton = document.querySelectorAll('.digit');
+const digitButtons = Array.from(document.querySelectorAll('.digit'));
+const operatorButton = document.querySelectorAll('.operator');
+const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 
 
 function add(num1, num2) {
@@ -27,13 +32,6 @@ function operate(num1, num2, operator) {
     if (operator == '*') return multiply(num1, num2);
     if (operator == '/') return divide(num1, num2);
 }
-
-
-const display = document.querySelector('#display');
-const digitButton = document.querySelectorAll('.digit');
-const digitButtons = Array.from(document.querySelectorAll('.digit'));
-const operatorButton = document.querySelectorAll('.operator');
-const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 
 function pressNumber() {
     digitButtons.forEach(digitButton => {
