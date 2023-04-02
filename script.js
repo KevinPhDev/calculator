@@ -35,15 +35,20 @@ function operate(num1, num2, operator) {
 
 digitButtons.forEach(digitButton => {
     digitButton.addEventListener('click', function() {
-        display.textContent += digitButton.textContent;
-        num1 = display.textContent;
-        return display.textContent;
+        if (operator == undefined) {
+            display.textContent += digitButton.textContent;
+            num1 = display.textContent;
+        } else if (operator !== undefined) {
+            display.textContent += digitButton.textContent;
+            num2 = display.textContent;
+        }
     });
 });
 
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click', function() {
         operator = operatorButton.textContent;
+        display.textContent = '';
         return operator;
     });
 });
