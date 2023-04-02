@@ -33,24 +33,18 @@ function operate(num1, num2, operator) {
     if (operator == '/') return divide(num1, num2);
 }
 
-function pressNumber() {
-    digitButtons.forEach(digitButton => {
-        digitButton.addEventListener('click', function() {
-            display.textContent += digitButton.textContent;
-            return display.textContent;
-        });
+digitButtons.forEach(digitButton => {
+    digitButton.addEventListener('click', function() {
+        display.textContent += digitButton.textContent;
+        num1 = display.textContent;
+        return display.textContent;
     });
-}
+});
 
-function pressOperator() {
-    operatorButtons.forEach(operatorButton => {
-        operatorButton.addEventListener('click', function() {
-            return operatorButton.textContent;
-        });
+operatorButtons.forEach(operatorButton => {
+    operatorButton.addEventListener('click', function() {
+        operator = operatorButton.textContent;
+        return operator;
     });
-}
+});
 
-
-
-pressNumber();
-pressOperator();
