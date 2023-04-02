@@ -7,26 +7,35 @@ const digitButton = document.querySelectorAll('.digit');
 const digitButtons = Array.from(document.querySelectorAll('.digit'));
 const operatorButton = document.querySelectorAll('.operator');
 const operatorButtons = Array.from(document.querySelectorAll('.operator'));
+const equalsButton = document.querySelector('#equals');
 
 
 function add(num1, num2) {
-    return num1 + num2;
+    result = eval(`${num1} + ${num2}`);
+    display.textContent = result;
+    return result;
 }
 
 function subtract(num1, num2) {
-    return num1 - num2;
+    result = eval(`${num1} - ${num2}`);
+    display.textContent = result;
+    return result;
 }
 
 function multiply(num1, num2) {
-    return num1 * num2;
+    result = eval(`${num1} * ${num2}`);
+    display.textContent = result;
+    return result;
 }
 
 function divide(num1, num2) {
-    return num1 / num2;
+    result = eval(`${num1} / ${num2}`);
+    display.textContent = result;
+    return result;
 }
 
 
-function operate(num1, num2, operator) {
+function operate(num1, num2) {
     if (operator == '+') return add(num1, num2);
     if (operator == '-') return subtract(num1, num2);
     if (operator == '*') return multiply(num1, num2);
@@ -53,3 +62,6 @@ operatorButtons.forEach(operatorButton => {
     });
 });
 
+equalsButton.addEventListener('click', function() {
+    operate(num1, num2);
+});
