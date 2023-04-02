@@ -8,6 +8,7 @@ const digitButtons = Array.from(document.querySelectorAll('.digit'));
 const operatorButton = document.querySelectorAll('.operator');
 const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 const equalsButton = document.querySelector('#equals');
+const allClearButton = document.querySelector('#allClear');
 
 
 function add(num1, num2) {
@@ -65,3 +66,10 @@ operatorButtons.forEach(operatorButton => {
 equalsButton.addEventListener('click', function() {
     operate(num1, num2);
 });
+
+allClearButton.addEventListener('click', function() {
+    num1 = undefined;
+    num2 = undefined;
+    operator = undefined;
+    display.textContent = '';
+})
