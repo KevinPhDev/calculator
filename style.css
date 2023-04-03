@@ -4,3 +4,39 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+#calculator {
+    display: flex;
+}
+
+#numbers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+#numbers button {
+    width: 33.33%;
+    flex-basis: 33.33%;
+}
+
+#zero {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+#operations {
+    display: flex;
+    flex-direction: column;
+}
