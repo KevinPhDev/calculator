@@ -9,6 +9,7 @@ const operatorButton = document.querySelectorAll('.operator');
 const operatorButtons = Array.from(document.querySelectorAll('.operator'));
 const equalsButton = document.querySelector('#equals');
 const allClearButton = document.querySelector('#allClear');
+const decimalButton = document.querySelector('#decimal');
 
 
 function add(num1, num2) {
